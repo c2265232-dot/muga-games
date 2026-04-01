@@ -6,8 +6,13 @@ body {
 }
 
 .header {
-  padding: 20px;
   text-align: center;
+  padding: 20px;
+}
+
+.header h1 {
+  color: #38bdf8;
+  text-shadow: 0 0 15px #38bdf8;
 }
 
 #search {
@@ -15,27 +20,39 @@ body {
   width: 300px;
   border-radius: 10px;
   border: none;
+  margin-top: 10px;
 }
 
 .games {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 150px);
-  gap: 15px;
+  grid-template-columns: repeat(auto-fill, 180px);
+  gap: 20px;
   padding: 20px;
   justify-content: center;
 }
 
 .game {
   background: #1e293b;
-  padding: 20px;
   border-radius: 15px;
-  text-align: center;
+  overflow: hidden;
   cursor: pointer;
   transition: 0.2s;
 }
 
 .game:hover {
+  transform: scale(1.05);
   background: #334155;
+}
+
+.game img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.game p {
+  padding: 10px;
+  text-align: center;
 }
 
 .player {
@@ -48,16 +65,22 @@ body {
   display: none;
 }
 
-.player iframe {
-  width: 100%;
-  height: 95%;
-  border: none;
+.topbar {
+  height: 50px;
+  background: #111;
+  display: flex;
 }
 
-.player button {
-  width: 100%;
-  height: 5%;
+.topbar button {
   background: red;
   color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.player iframe {
+  width: 100%;
+  height: calc(100% - 50px);
   border: none;
 }
