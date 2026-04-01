@@ -2,20 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Muga Games 55</title>
+  <title>Muga Games</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Tab Cloak -->
+  <link rel="icon" href="https://ssl.gstatic.com/classroom/favicon.png">
 </head>
 <body>
 
 <div class="header">
-  <h1>Muga Games 55</h1>
+  <h1>Muga Games</h1>
   <input type="text" id="search" placeholder="Search games...">
 </div>
 
 <div class="games" id="gamesContainer"></div>
 
 <div class="player" id="player">
-  <button onclick="closeGame()">Exit</button>
+  <div class="topbar">
+    <button onclick="closeGame()">Exit</button>
+  </div>
   <iframe id="gameFrame"></iframe>
 </div>
 
